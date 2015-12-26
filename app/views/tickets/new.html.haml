@@ -1,0 +1,7 @@
+.container.tickets-buy
+  %h2
+    = @event.name
+  %ul
+    - @event.ticket_types.each do |type|
+      %li
+        = type.name

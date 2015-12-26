@@ -2,7 +2,6 @@ FactoryGirl.define do
   factory :ticket_type do
     name { ["courtside", "vip", "premium", "standard"] }
     price { Faker::Number.number(5) }
-    max_quantity { Faker::Number. }
+    max_quantity { Faker::Number.number(2) }
   end
-
 end
