@@ -1,0 +1,6 @@
+.container
+  = simple_form_for @venue do |f|
+    = f.input :name
+    = f.input :full_address
+    = f.association :region
+    = f.submit

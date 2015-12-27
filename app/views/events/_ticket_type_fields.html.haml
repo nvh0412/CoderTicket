@@ -1,0 +1,6 @@
+.form-inline.nested-fields
+  = f.input :name, html: { class: 'col-md-6' }, label: false
+  = f.input :price, html: { class: 'col-md-3' }, label: false
+  = f.input :max_quantity, html: { class: 'col-md-3' }, label: false
+  = link_to_remove_association "remove", f
+  %br

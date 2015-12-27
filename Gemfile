@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use pg as the database for Active Record
@@ -24,14 +24,17 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap', '~> 4.0.0.alpha1'
 gem 'simple_form'
 gem 'quiet_assets'
 gem 'better_errors', group: :development
 gem 'font-awesome-rails'
-
+gem 'devise'
+gem 'haml-rails'
+gem 'cocoon'
+gem 'pg_search'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -41,6 +44,15 @@ gem 'font-awesome-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'factory_girl_rails'
+  gem 'guard-rspec', require: false
+end
+
+group :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda-matchers'
+  gem 'faker'
+  gem 'simplecov'
 end
 
 group :development do
@@ -50,4 +62,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
