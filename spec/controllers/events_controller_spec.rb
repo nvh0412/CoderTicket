@@ -2,8 +2,6 @@ require 'rails_helper'
 
 describe EventsController, type: :controller do
   let(:response_body) { response.body }
-  let!(:category) { create(:category) }
-  let!(:venue) { create(:venue) }
 
   describe "GET index" do
     context "Past events" do
@@ -29,7 +27,7 @@ describe EventsController, type: :controller do
   end
 
   describe "POST create" do
-    let!(:event) { build(:event, category: category, venue: venue) }
+    let!(:event) { build(:event) }
     let!(:user) { create(:user) }
 
     context "User haven't logged in" do
@@ -63,7 +61,7 @@ describe EventsController, type: :controller do
       end
 
       context "invalid params" do
-        let(:params) { { event: { name: 'invalid name' } } }
+        let(:params) { { event: { name: nil } } }
         it "shouldn't be save event and render new event page" do
           post :create, params
           expect(response).to render_template(:new)

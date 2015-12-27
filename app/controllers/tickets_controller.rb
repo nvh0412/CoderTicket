@@ -1,9 +1,11 @@
 class TicketsController < ApplicationController
   before_action :authenticate_user!
   before_action :get_event, only: [:new, :create]
+  respond_to :json, :js, :html
 
   def index
     @tickets = current_user.tickets
+    respond_with @tickets
   end
 
   def new

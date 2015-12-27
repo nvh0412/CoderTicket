@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :ticket do
     user
-    event
-    quantity 1000
+    ticket_type
+    quantity 10
   end
 end

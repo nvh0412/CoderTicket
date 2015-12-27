@@ -9,7 +9,7 @@ class Event < ActiveRecord::Base
 
   scope :up_comming, -> { where("ends_at >= ? and published = true", DateTime.current) }
   scope :find_recent_event, -> (event_id) {
-    where("ends_at >= ? and id = ?", DateTime.current, event_id)
+    where("ends_at >= ? and published = true and id = ?", DateTime.current, event_id)
   }
 
   belongs_to :venue
