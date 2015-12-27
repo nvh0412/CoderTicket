@@ -13,16 +13,16 @@
           .clearfix
         = link_to new_event_ticket_path(@event) do
           %button.btn.btn-lg.btn-block.btn-warning BOOK NOW
+        %hr
+        - if current_user && current_user.id == @event.user.id
+          = link_to "EDIT", edit_event_path, class: 'btn btn-lg btn-block btn-warning'
     .col-md-9.event-content
-      .hero-img.hidden-sm-down{:style => "background-image: url(#{@event.hero_image_url}); background-size: cover;"}       .container
-        %h3
-          = @event.name
-        .pull-left
-          = fa_icon 'clock-o'
-        .time-details
-          = @event.starts_at.strftime('%A, %d %b %Y %l:%M %p')
-        .pull-left
-          = fa_icon 'map-marker'
+      .hero-img.hidden-sm-down{:style => "background-image: url(#{@event.hero_image_url}); background-size: cover;"}
+      .container
+        %h3= @event.name
+        .pull-left= fa_icon 'clock-o'
+        .time-details= @event.starts_at.strftime('%A, %d %b %Y %l:%M %p')
+        .pull-left= fa_icon 'map-marker'
         .venue-details
           = @event.venue.name
           %br/

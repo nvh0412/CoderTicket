@@ -1,0 +1,19 @@
+= simple_form_for @event do |f|
+  = f.input :name
+  = f.input :hero_image_url
+  = f.input :extended_html_description
+  = f.association :venue
+  = f.association :category
+  = f.input :starts_at
+  = f.input :ends_at
+  = f.input :published
+  #ticket_types
+    %ol
+      = f.fields_for :ticket_types do |type|
+        = render 'ticket_type_fields', :f => type
+      .links
+    = link_to_add_association 'Add Ticket Type', f, :ticket_types,
+    'data-association-insertion-node' => "#ticket_types ol",
+    'data-association-insertion-method' => "append",
+    :wrap_object => Proc.new {|ticket_type| ticket_type }
+  = f.submit

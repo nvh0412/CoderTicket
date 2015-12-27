@@ -5,3 +5,10 @@
     - @event.ticket_types.each do |type|
       %li
         = type.name
+        = type.max_quantity
+        = simple_form_for [@event, @ticket] do |f|
+          = f.error_notification
+          .form-inputs
+            = f.input :ticket_type_id, as: :hidden, input_html: { value: type.id }
+            = f.input :quantity
+            = f.button :submit, 'Order'

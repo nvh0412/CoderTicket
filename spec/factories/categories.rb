@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :category do
-    name { ['Entertainment', 'Learning', 'Everything Else'].sample }
+    name { Faker::Name.name }
   end
-
 end

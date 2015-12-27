@@ -1,6 +1,5 @@
 class TicketType < ActiveRecord::Base
   belongs_to :event
-
-  validates :name, inclusion: ["courtside", "vip", "premium", "standard"]
-  validates :max_quantity, numericality: { less_than_or_equal_to: 10 }
+  validates :name, presence: true
+  validates :max_quantity, numericality: { greater_than_or_equal_to: 0 }
 end

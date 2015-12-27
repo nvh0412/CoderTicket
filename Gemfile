@@ -32,7 +32,9 @@ gem 'quiet_assets'
 gem 'better_errors', group: :development
 gem 'font-awesome-rails'
 gem 'devise'
-gem "haml-rails"
+gem 'haml-rails'
+gem 'cocoon'
+gem 'pg_search'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
