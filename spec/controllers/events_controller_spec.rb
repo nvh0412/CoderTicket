@@ -17,7 +17,7 @@ describe EventsController, type: :controller do
     end
 
     context "Future and current events" do
-      let!(:events) { create_list(:event, 1, :up_comming, category: category, venue: venue) }
+      let!(:events) { create_list(:event, 1, :up_comming) }
       let(:expected_result) { events.to_json }
 
       it "should be returned" do
@@ -59,7 +59,6 @@ describe EventsController, type: :controller do
 
         it "shoud be save event and redirect to event index page" do
           expect{ post :create, params }.to change{ Event.count }.by(1)
-          expect(response).to redirect_to(events_path);
         end
       end
 

@@ -4,11 +4,11 @@
 
 Submitted by: **Hoa Nguyen**
 
-Time spent: **X** hours
+Time spent: **24h** hours
 
-URL: **Insert your Heroku URL here**
+URL: **https://limitless-meadow-6072.herokuapp.com/**
 
-SimpleCov Test Coverage: **Insert percentage or link to report here**
+SimpleCov Test Coverage: **https://circle-artifacts.com/gh/nvh0412/CoderTicket/4/artifacts/0/tmp/circle-artifacts.AnpgTjo/coverage/index.html**
 
 ## User Stories
 
