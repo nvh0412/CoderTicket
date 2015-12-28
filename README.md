@@ -8,7 +8,7 @@ Time spent: **24h** hours
 
 URL: **https://limitless-meadow-6072.herokuapp.com/**
 
-SimpleCov Test Coverage: **https://circle-artifacts.com/gh/nvh0412/CoderTicket/4/artifacts/0/tmp/circle-artifacts.AnpgTjo/coverage/index.html**
+SimpleCov Test Coverage: **https://circle-artifacts.com/gh/nvh0412/CoderTicket/8/artifacts/0/tmp/circle-artifacts.xWd8i0e/coverage/index.html**
 
 ## User Stories
 
